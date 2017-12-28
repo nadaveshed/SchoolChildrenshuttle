@@ -1,0 +1,18 @@
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="13" (mapClick)="onChoseLocation($event)">
+  
+<!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>-->
+
+<agm-marker 
+[latitude]="lat" 
+[longitude]="lng"
+*ngIf="locationChosen"></agm-marker>        
+    
+<agm-circle [latitude]="lat + 0.3" [longitude]="lng" 
+    [radius]="5000"
+    [fillColor]="'red'"
+    [circleDraggable]="true"
+    [editable]="true">
+</agm-circle>
+  
+  
+</agm-map>

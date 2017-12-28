@@ -8,6 +8,7 @@ import { Component } from "@angular/core";
                 <ul class="nav nav-pills">
                     <li routerLinkActive="active"><a [routerLink]="['/messages']">Messenger</a></li>
                     <li routerLinkActive="active"><a [routerLink]="['/auth']">Authentication</a></li>
+                    <li routerLinkActive="active"><a [routerLink]="['/map']">Map</a></li>   
                 </ul>
             </nav>
         </header>

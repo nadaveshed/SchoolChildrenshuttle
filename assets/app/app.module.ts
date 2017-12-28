@@ -10,15 +10,21 @@ import { AuthService } from "./auth/auth.service";
 import { ErrorComponent } from "./errors/error.component";
 import { ErrorService } from "./errors/error.service";
 import { MessageModule } from './messages/message.module';
+import { AgmCoreModule } from '@agm/core';
+import { GoogleMapsComponent } from './map/google-maps.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         AuthenticationComponent,
         HeaderComponent,
-        ErrorComponent
+        ErrorComponent,
+        GoogleMapsComponent
     ],
     imports: [
+        AgmCoreModule.forRoot({
+            apiKey: 'AIzaSyAl6MPCBdfXpffucV4RcmcYS7c2pG7eg40'
+        }),
         BrowserModule,
         routing,
         HttpModule,
