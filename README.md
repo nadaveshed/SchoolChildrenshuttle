@@ -19,7 +19,7 @@ We're trying to use the best tools and practices in order to produce a quality e
 | Recommended IDE | [Visual Studio](https://code.visualstudio.com/) |
 | License | [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/nadaveshed/SchoolChildrenshuttle/blob/master/LICENSE) |
 | Code Style | [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/nadaveshed/SchoolChildrenshuttle) |
-| Issues | [![GitHub issues](https://img.shields.io/github/issues/Oterem/moleAgnose.svg?style=flat)](https://github.com/nadaveshed/SchoolChildrenshuttle/issues) |
+| Issues | [![GitHub issues](https://img.shields.io/github.com/nadaveshed/SchoolChildrenshuttle.svg?style=flat)](https://github.com/nadaveshed/SchoolChildrenshuttle/issues) |
 | Project Management Board| [here](https://github.com/nadaveshed/SchoolChildrenshuttle/projects/1) |
 | Documnetation | [![Inline docs](http://inch-ci.org/github.com/nadaveshed/SchoolChildrenshuttle.svg?branch=master)](https://github.com/Oterem/moleAgnose/tree/master/Material/docs) |
 | Project diary | [![Inline diary](http://inch-ci.orggithub.com/nadaveshed/SchoolChildrenshuttle.svg?branch=master)](https://github.com/Oterem/moleAgnose/wiki/Project-Diary) |
