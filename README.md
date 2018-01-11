@@ -21,8 +21,8 @@ We're trying to use the best tools and practices in order to produce a quality e
 | Code Style | [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/nadaveshed/SchoolChildrenshuttle) |
 | Issues | [![GitHub issues](https://img.shields.io/github.com/nadaveshed/SchoolChildrenshuttle.svg?style=flat)](https://github.com/nadaveshed/SchoolChildrenshuttle/issues) |
 | Project Management Board| [here](https://github.com/nadaveshed/SchoolChildrenshuttle/projects/1) |
-| Documnetation | [![Inline docs](http://inch-ci.org/github.com/nadaveshed/SchoolChildrenshuttle.svg?branch=master)](https://github.com/Oterem/moleAgnose/tree/master/Material/docs) |
-| Project diary | [![Inline diary](http://inch-ci.orggithub.com/nadaveshed/SchoolChildrenshuttle.svg?branch=master)](https://github.com/Oterem/moleAgnose/wiki/Project-Diary) |
+| Documnetation | [![Inline docs](http://inch-ci.org/github.com/nadaveshed/SchoolChildrenshuttle.svg?branch=master)](https://github.com) |
+| Project diary | [![Inline diary](http://inch-ci.orggithub.com/nadaveshed/SchoolChildrenshuttle.svg?branch=master)](https://github.com) |
 
 
 ## Software Design
