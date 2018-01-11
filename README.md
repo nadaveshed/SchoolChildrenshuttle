@@ -16,9 +16,9 @@ We're trying to use the best tools and practices in order to produce a quality e
 |Category|Status|
 |---|---|
 | Version Control System| [git](https://git-scm.com/) & [github](https://github.com/) |
-| Recommended IDE | [Angular 5](https://angular.io/) |
-| License | [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/Oterem/moleAgnose/blob/master/LICENSE) |
-| Code Style | [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/Oterem/moleAgnose) |
+| Recommended IDE | [Visual Studio](https://code.visualstudio.com/) |
+| License | [![Open Source Love](https://badges.frapsoft.com/os/mit/mit.svg?v=102)](https://github.com/nadaveshed/SchoolChildrenshuttle/blob/master/LICENSE) |
+| Code Style | [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/nadaveshed/SchoolChildrenshuttle) |
 | Issues | [![GitHub issues](https://img.shields.io/github/issues/Oterem/moleAgnose.svg?style=flat)](https://github.com/Oterem/moleAgnose/issues) |
 | Project Management Board| [here](https://github.com/Oterem/moleAgnose/projects/1) |
 | Documnetation | [![Inline docs](http://inch-ci.org/github/Oterem/moleAgnose.svg?branch=master)](https://github.com/Oterem/moleAgnose/tree/master/Material/docs) |
@@ -29,4 +29,4 @@ We're trying to use the best tools and practices in order to produce a quality e
 [Architecture](https://github.com)<br/>
 [Class diagram](https://github.com)<br/>
 [State charts](https://github.com) <br/>
-[Sequence diagram]https://github.com()
+[Sequence diagram](https://github.com)
