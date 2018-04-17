@@ -6,9 +6,18 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 
+
+
+
+
+
+
 var appRoutes = require('./routes/app');
 var messageRoutes = require('./routes/messages');
 var userRoutes = require('./routes/user');
+var mapRouter = require("./routes/map");
+
+
 
 var app = express();
 mongoose.connect('localhost:27017/node-angular');
@@ -21,7 +30,7 @@ app.set('view engine', 'hbs');
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -32,7 +41,9 @@ app.use(function (req, res, next) {
     next();
 });
 
+
 app.use('/message', messageRoutes);
+app.use("/map", mapRouter);
 app.use('/user', userRoutes);
 app.use('/', appRoutes);
 

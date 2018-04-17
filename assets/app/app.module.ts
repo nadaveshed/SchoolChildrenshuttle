@@ -12,6 +12,7 @@ import { ErrorService } from "./errors/error.service";
 import { MessageModule } from './messages/message.module';
 import { AgmCoreModule } from '@agm/core';
 import { GoogleMapsComponent } from './map/google-maps.component';
+import { MapService } from './services/map/map.service';
 
 
 @NgModule({
@@ -31,7 +32,11 @@ import { GoogleMapsComponent } from './map/google-maps.component';
         HttpModule,
         MessageModule
     ],
-    providers: [AuthService, ErrorService],
+    providers: [
+        AuthService, 
+        ErrorService,
+        MapService
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {

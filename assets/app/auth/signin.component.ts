@@ -21,11 +21,12 @@ export class SigninComponent {
                 data => {
                     localStorage.setItem('token', data.token);
                     localStorage.setItem('userId', data.userId);
-                    this.router.navigateByUrl('/');
+                    this.router.navigateByUrl('/map');
                 },
                 error => console.error(error)
             );
         this.myForm.reset();
+        this.router.navigate(['./signin']);
     }
 
     ngOnInit() {

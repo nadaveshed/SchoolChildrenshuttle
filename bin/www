@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 
-var app = require('../appz');
+var app = require('../app');
 var debug = require('debug')('node-rest:server');
 var http = require('http');
 
@@ -24,6 +24,19 @@ var server = http.createServer(app);
 /**
  * Listen on provided port, on all network interfaces.
  */
+var map = require("../routes/map");
+
+
+var io = require('socket.io')(server);
+io.on('connection', (s) => {
+  console.log("connect");
+  map.setSocket(s);
+  s.emit("connect", " connect!");
+});
+
+
+
+
 
 server.listen(port);
 server.on('error', onError);

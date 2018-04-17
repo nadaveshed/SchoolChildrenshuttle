@@ -1,3 +1,7 @@
+<button (click)="startFollow()">
+  start follow
+</button>
+
 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="13" (mapClick)="onChoseLocation($event)">
   
 <!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>-->
@@ -7,21 +11,53 @@
 [longitude]="lng"
 *ngIf="locationChosen"></agm-marker>   -->     
     
-<agm-marker 
-      *ngFor="let m of markers; let i = index"
-      (markerClick)="clickedMarker(m.label, i)"
-      [latitude]="m.lat"
-      [longitude]="m.lng"
-      [label]="m.label"
-      [markerDraggable]="m.draggable"
-      (dragEnd)="markerDragEnd(m, $event)"
-      >
+<agm-marker [latitude]="lat" [longitude]="lng" 
+*ngFor="let m of markers; let i = index"
+(markerClick)="clickedMarker(m.label, i)"
+[latitude]="m.lat"
+[longitude]="m.lng"
+[label]="m.label"
+[markerDraggable]="m.draggable"
+(dragEnd)="markerDragEnd(m, $event)">
       
     <agm-info-window>
-      <strong>InfoWindow content</strong>
+     <h3><strong>My location</strong></h3> 
+     <p>You are here!</p>
     </agm-info-window>
-    
   </agm-marker>
     
   
 </agm-map>
+
+
+<!--
+<div class="row row-map">
+  <div class="col-md-8">
+      <h2 class="heading">Map</h2>
+      <hr/>
+    <div id="map"></div>
+  </div>
+  <div class="col-md-4 info-container">
+    <div id="run-info">
+      <h2 class="heading">Run Data</h2>
+      <hr/>
+      <div class="data-heading">Route Name:</div>
+      <p class="data-entry">{{ activityName }}</p>
+      <hr/>
+
+      <div class="data-heading">Date:</div>
+      <p class="data-entry">{{ activityDate | date:"longDate" }} <p>
+      <hr/>
+
+      <div class="data-heading">Total Distance:</div>
+      <p class="data-entry">{{ activityDistance }} miles</p>
+      <hr/>
+
+      <div class="data-heading">Comments:</div>
+      <p class="data-entry">{{ activityComments }}</p>
+      <hr/>
+    </div>
+  </div>
+</div>
+     
+-->
