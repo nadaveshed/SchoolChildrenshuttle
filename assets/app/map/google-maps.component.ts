@@ -76,17 +76,7 @@ export class GoogleMapsComponent implements OnInit {
     });
     this.mapService.getSocketUpdate();
     locationds = this.mapService.currLocation;
-    console.log(locationds);
-    for(let i of locationds.observers)
-    {
-      this.markers[i] = 
-      {
-        lat: this.lat,
-        lng: this.lng,
-        label: 'c',
-        draggable: true
-      }
-    }
+    console.log("aaa");
   } 
 }
 
