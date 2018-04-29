@@ -2,15 +2,28 @@
   start follow
 </button>
 
+
+<ngui-map center="Jerusalem, Israel">
+    <marker *ngFor="let marker of markers" 
+    [position]="{
+      lat: marker.lat,
+      lng: marker.lng,
+      title: marker.userId
+    }"></marker>
+</ngui-map>
+
+<!--
 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="13" (mapClick)="onChoseLocation($event)">
+-->
   
 <!-- <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>-->
 
 <!--<agm-marker 
 [latitude]="lat" 
 [longitude]="lng"
-*ngIf="locationChosen"></agm-marker>   -->     
-    
+*ngIf="locationChosen"></agm-marker>   -->
+
+<!--
 <agm-marker [latitude]="lat" [longitude]="lng" 
 *ngFor="let m of markers; let i = index"
 (markerClick)="clickedMarker(m.label, i)"
@@ -29,6 +42,7 @@
   
 </agm-map>
 
+-->
 
 <!--
 <div class="row row-map">

@@ -6,13 +6,23 @@ const Location = require("../models/locations");
 
 let socket = null;
 
+/**
+ * @param req.body = {lat, lng, userId}
+ */
 router.post('/sendLocation/', (req, res, next) => {
     // let loc  = req.body;/
     console.log({
         lat: req.body.lat,
         lng :req.body.lng
     })
-    let loc = new Location(req.body);
+
+    //מה לגבי לשמור את המשתמש ששלח לך את המיקום?
+    // let loc = new (req.body);
+    let loc = {
+        lat: req.body.lat,
+        lng: req.body.lng,
+        userId: req.body.userId
+    }
     console.log(loc)
     loc.save(function(err, doc) {
         console.log(doc);

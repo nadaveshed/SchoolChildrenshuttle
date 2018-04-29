@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import { MapService } from '../services/map/map.service';
+import { Subscription } from 'rxjs';
+import { UserLocationView, UserLocation } from '../models/user-location.model';
 
 @Component({
   selector: 'app-google-maps',
@@ -8,10 +10,11 @@ import { MapService } from '../services/map/map.service';
   styleUrls: ['./google-maps.component.css'],
 })
 
-export class GoogleMapsComponent implements OnInit {
+export class GoogleMapsComponent implements OnInit, OnDestroy {
   lat: number;// = 31.6547339;
   lng: number;// = 35.1207842;
   locationChosen = false;
+  subscripition: Subscription;
 
   constructor(private mapService: MapService) {
     /*navigator.geolocation.watchPosition(position=>{
@@ -33,11 +36,11 @@ export class GoogleMapsComponent implements OnInit {
   }
 
   mapClicked($event: MouseEvent) {
-    this.markers.push({
-      lat: $event.coords.lat,
-      lng: $event.coords.lng,
-      draggable: true
-    });
+    // this.markers.push({
+    //   lat: $event.coords.lat,
+    //   lng: $event.coords.lng,
+    //   draggable: true
+    // });
   }
 
   markerDragEnd(m: marker, $event: MouseEvent) {
@@ -45,20 +48,12 @@ export class GoogleMapsComponent implements OnInit {
     console.log(m.label, $event.coords.lat, $event.coords.lng);
   }
 
-  markers: marker[] = [
-    {
-      lat: this.lat,
-      lng: this.lng,
-      label: 'A',
-      draggable: true
-    },
-    {
-      lat: this.lat,
-      lng: this.lng,
-      label: 'B',
-      draggable: true
-    }
-  ]
+  markers: UserLocationView[] = []
+  //  = [{
+  //   // draggable: false,
+  //   lat: 31.7766,
+  //   lng: 35.2
+  // }];
 
   ngOnInit() {
     // if(navigator.geolocation){
@@ -67,11 +62,26 @@ export class GoogleMapsComponent implements OnInit {
         this.lng = 35.2000724; //position.coords.longitude;
         console.log(this.lat, "my location " ,this.lng);
       });
+      this.subscripition = this.mapService.locationUpdates.subscribe((loc: UserLocation) => {
+        if(!this.markers.find(u => u.userId === loc.userId))
+          this.markers.push(new UserLocationView(loc))
+        // this.markers.push({
+        //   lat: +loc.lat,
+        //   lng: +loc.lng,
+        //   label: 'shalev',
+        //   draggable: true
+        // });
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.subscripition.unsubscribe();
   }
 
   public startFollow() {
     var locationds;
     this.mapService.currLocation.subscribe(res => {
+
       console.log(res)
     });
     this.mapService.getSocketUpdate();

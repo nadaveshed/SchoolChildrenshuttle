@@ -13,6 +13,7 @@ import { MessageModule } from './messages/message.module';
 import { AgmCoreModule } from '@agm/core';
 import { GoogleMapsComponent } from './map/google-maps.component';
 import { MapService } from './services/map/map.service';
+import { NguiMapModule} from '@ngui/map';
 
 
 @NgModule({
@@ -24,9 +25,10 @@ import { MapService } from './services/map/map.service';
         GoogleMapsComponent
     ],
     imports: [
-        AgmCoreModule.forRoot({
-            apiKey: 'AIzaSyAl6MPCBdfXpffucV4RcmcYS7c2pG7eg40'
-        }),
+        NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAl6MPCBdfXpffucV4RcmcYS7c2pG7eg40'}),
+        //AgmCoreModule.forRoot({
+        //    apiKey: 'AIzaSyAl6MPCBdfXpffucV4RcmcYS7c2pG7eg40'
+        //}),
         BrowserModule,
         routing,
         HttpModule,
