@@ -39,6 +39,7 @@ export class MapService {
     }
 
     postMyLocation() {
+        console.log(this.authService.userId)
         const headers = new Headers({ 'Content-Type': 'application/json' });
         return this.http.post('http://localhost:3000/map/sendLocation', new UserLocation(
             this._myLoc.lat,

@@ -35,7 +35,8 @@ export class AuthService {
 
 
     get userId() {
-        return this._user ? this._user._id : ""
+        console.log(this._user)
+        return this._user ? this._user.userId : ""
     }
     logout() {
         localStorage.clear();

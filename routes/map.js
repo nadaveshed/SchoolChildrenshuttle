@@ -13,26 +13,32 @@ router.post('/sendLocation/', (req, res, next) => {
     // let loc  = req.body;/
     console.log({
         lat: req.body.lat,
-        lng :req.body.lng
+        lng: req.body.lng
     })
 
     //מה לגבי לשמור את המשתמש ששלח לך את המיקום?
     // let loc = new (req.body);
-    let loc = {
+    // let loc = {
+    //     lat: req.body.lat,
+    //     lng: req.body.lng,
+    //     userId: req.body.userId
+    // }
+    let loc = new Location({
         lat: req.body.lat,
         lng: req.body.lng,
         userId: req.body.userId
-    }
+    });
+    
     console.log(loc)
-    loc.save(function(err, doc) {
+    loc.save(function (err, doc) {
         console.log(doc);
-        if (doc){
+        if (doc) {
             console.log(socket)
-            if(socket)
+            if (socket)
                 socket.emit("send-location", doc);
-            res.status(200).json({"a":"a"});
+            res.status(200).json({ "a": "a" });
         }
-        if (err){
+        if (err) {
             console.log(err)
             res.status(401).json();
         }
@@ -41,7 +47,7 @@ router.post('/sendLocation/', (req, res, next) => {
 });
 
 module.exports = router;
-module.exports.setSocket = function setSocket(s){socket = s;};
+module.exports.setSocket = function setSocket(s) { socket = s; };
 /**
  * router.delete('/:id', function (req, res, next) {
     var decoded = jwt.decode(req.query.token);

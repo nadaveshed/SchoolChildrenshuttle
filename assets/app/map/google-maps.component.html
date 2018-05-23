@@ -1,14 +1,17 @@
 <button (click)="startFollow()">
   start follow
 </button>
+<button (click)="ngOnDestroy()">
+  stop follow
+</button>
 
 
 <ngui-map center="Jerusalem, Israel">
-    <marker *ngFor="let marker of markers" 
+    <marker *ngFor="let m of markers" 
     [position]="{
-      lat: marker.lat,
-      lng: marker.lng,
-      title: marker.userId
+      lat: m.lat,
+      lng: m.lng,
+      title: m.userId
     }"></marker>
 </ngui-map>
 
