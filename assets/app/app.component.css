@@ -1,13 +1,5 @@
 .container{
     background-color: wheat;
     width: 100%;
-    height: 100%;
-}
-
-.footer{
-    background-color: aquamarine;
-}
-
-container-fluid{
-    background-color: black;
+    height: 720px;
 }

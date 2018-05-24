@@ -11,14 +11,4 @@ var schema = new Schema({
     userId: { type: String }
 });
 
-/*
-schema.post('insert', function(location) {
-    User.findById(location._id, function (err, user) {
-        user.lat = location.lat;
-        user.lng = location.lng;
-        user.save();
-    });
-});*/
-
-
 module.exports = mongoose.model('Location', schema);
