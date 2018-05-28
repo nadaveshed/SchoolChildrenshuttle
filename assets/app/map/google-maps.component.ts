@@ -86,13 +86,10 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
   // }
 
   public startFollow() {
-    var locationds;
     this.mapService.currLocation.subscribe(res => {
-
       console.log(res)
     });
     this.mapService.getSocketUpdate();
-    locationds = this.mapService.currLocation;
     console.log("start");
   } 
 
@@ -100,6 +97,10 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
     // this.mapService.currLocation.unsubscribe();
     console.log("goodby");
   } 
+
+  public goBack(){
+    console.log("I want to see the main page")
+  }
 }
 
 interface marker {
