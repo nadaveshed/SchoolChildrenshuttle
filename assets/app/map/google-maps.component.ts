@@ -2,6 +2,7 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { MouseEvent } from '@agm/core';
 import { MapService } from '../services/map/map.service';
 import { Subscription } from 'rxjs';
+import { RouterLink, Router } from '@angular/router';
 import { UserLocationView, UserLocation } from '../models/user-location.model';
 
 @Component({
@@ -11,9 +12,11 @@ import { UserLocationView, UserLocation } from '../models/user-location.model';
 })
 
 export class GoogleMapsComponent implements OnInit, OnDestroy {
-  lat: number;// = 31.6547339;
-  lng: number;// = 35.1207842;
+  lat: number;
+  lng: number;
   locationChosen = false;
+  startf: boolean = true;
+  stopf: boolean = false;
   subscripition: Subscription;
 
   constructor(private mapService: MapService) {
@@ -72,18 +75,10 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
         }
         console.log(this.markers)
 
-        // this.markers.push({
-        //   lat: +loc.lat,
-        //   lng: +loc.lng,
-        //   label: 'shalev',
-        //   draggable: true
-        // });
       });
   }
 
-  // ngOnDestroy(): void {
-  //   this.subscripition.unsubscribe();
-  // }
+
 
   public startFollow() {
     this.mapService.currLocation.subscribe(res => {
@@ -98,9 +93,6 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
     console.log("goodby");
   } 
 
-  public goBack(){
-    console.log("I want to see the main page")
-  }
 }
 
 interface marker {

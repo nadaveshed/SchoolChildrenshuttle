@@ -6,9 +6,11 @@ import { Component } from "@angular/core";
         <header class="row">
             <nav class="col-md-8 col-md-offset-2">
                 <ul class="nav nav-pills">
+                    <li routerLinkActive="active"><a [routerLink]="['/mainpage']">Main</a></li>
                     <li routerLinkActive="active"><a [routerLink]="['/auth']">Authentication</a></li>
                     <li routerLinkActive="active"><a [routerLink]="['/map']">Map</a></li>
-                    <li routerLinkActive="active"><a [routerLink]="['/mainpage']">main</a></li>
+
+                    <li routerLinkActive="deactive"><a [routerLink]="['/auth/logout']">logout</a></li>
                 </ul>
             </nav>
         </header>

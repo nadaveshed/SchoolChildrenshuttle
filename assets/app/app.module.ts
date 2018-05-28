@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from "@angular/http";
 
+import { RouterLink, Router } from '@angular/router';
 import { AppComponent } from "./app.component";
 import { AuthenticationComponent } from "./auth/authentication.component";
 import { HeaderComponent } from "./header.component";
@@ -16,8 +17,8 @@ import { MapService } from './services/map/map.service';
 import { NguiMapModule} from '@ngui/map';
 import { MainpageComponent } from './mainpage/main-page.component';
 
-
 @NgModule({
+
     declarations: [
         AppComponent,
         AuthenticationComponent,
