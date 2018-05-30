@@ -12,7 +12,9 @@ import { Component } from "@angular/core";
 
                     <li routerLinkActive="deactive"><a [routerLink]="['/auth/logout']">logout</a></li>
                 </ul>
-            </nav> -->    <!-- Navigation -->
+            </nav> -->  
+            
+            <!-- Navigation -->
             <nav id="siteNav" class="navbar navbar-default navbar-fixed-top" role="navigation">
                 <div class="container">
                     <!-- Logo and responsive toggle -->

@@ -63,11 +63,16 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
       navigator.geolocation.getCurrentPosition(position=>{
         this.lat = 31.776629; //position.coords.latitude;
         this.lng = 35.2000724; //position.coords.longitude;
-        console.log(this.lat, "my location " ,this.lng);
+        console.log("my location: ", this.lat, this.lng);
       });
       this.subscripition = this.mapService.locationUpdates.subscribe((loc: UserLocation) => {
-        if(!this.markers.find(u => u.userId === loc.userId))
+        
+        if(!this.markers.find(u => u.userId === loc.userId)){
+          //here -> post to 'user/getById/' , {_id: loc.userId}).subscribe(res=>{
+//        marker.name = res.username;
+        // })
           this.markers.push(new UserLocationView(loc))
+        }
         else{
           let i = this.markers.findIndex(u => u.userId === loc.userId);
           this.markers.splice(i, 1);
@@ -85,7 +90,7 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
       console.log(res)
     });
     this.mapService.getSocketUpdate();
-    console.log("start");
+    console.log("start follow");
   } 
 
   public ngOnDestroy() {

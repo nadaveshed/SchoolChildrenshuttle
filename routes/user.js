@@ -26,6 +26,26 @@ router.post('/', function (req, res, next) {
     });
 });
 
+router.post('/getByName/', (req, res, next) => {
+    User.findById(req.body._id, (err, res)=>{
+        if (err) {
+            return res.status(500).json({
+                title: 'An error occurred',
+                error: err
+            });
+        }
+        if (!user) {
+            return res.status(401).json({
+                title: 'Login failed',
+                error: {message: 'Invalid login credentials'}
+            });
+        }
+        else{
+            return res.status(200).json({ username: user.firstName});
+        }
+    });
+})
+
 router.post('/signin/', function(req, res, next) {
     User.findOne({email: req.body.email}, function(err, user) {
         if (err) {

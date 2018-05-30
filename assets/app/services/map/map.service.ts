@@ -48,15 +48,11 @@ export class MapService {
     }
 
     public getSocketUpdate() {
-        var loca;
         console.log(window["origin"])
         const socket = io.connect(window["origin"]);
-        socket.on('connect', function () { console.log("connect successfull") });;
+        socket.on('connect', function () { console.log("connect successfull") });
         socket.on("send-location", (loc: UserLocation) => {
-            console.log("server position:");
-            console.log(loc);
-            loca = loc.lat;
-            console.log(loc.lat);
+            console.log("server position: " , loc.lat, loc.lng);
             this.locationUpdates.next(loc);
         })
     }
