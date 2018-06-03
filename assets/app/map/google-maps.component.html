@@ -13,7 +13,6 @@
     <marker *ngFor="let m of markers" 
     [position]="{
       lat: m.lat,
-      lng: m.lng,
-      title: m.userId
-    }"></marker>
+      lng: m.lng
+    }" [label]=m.userName></marker>
 </ngui-map>

@@ -68,12 +68,11 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
       this.subscripition = this.mapService.locationUpdates.subscribe((loc: UserLocation) => {
         
         if(!this.markers.find(u => u.userId === loc.userId)){
-          //here -> post to 'user/getById/' , {_id: loc.userId}).subscribe(res=>{
-//        marker.name = res.username;
-        // })
+          //debugger
           this.markers.push(new UserLocationView(loc))
         }
         else{
+          //debugger
           let i = this.markers.findIndex(u => u.userId === loc.userId);
           this.markers.splice(i, 1);
           this.markers.push(new UserLocationView(loc))

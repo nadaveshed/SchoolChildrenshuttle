@@ -8,7 +8,7 @@ var schema = new Schema({
     _id: { type: Schema.ObjectId, auto: true },
     lat: { type: Number },
     lng: { type: Number },
-    userId: { type: String }
+    userId: { type: String }    
 });
 
 module.exports = mongoose.model('Location', schema);

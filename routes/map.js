@@ -33,7 +33,7 @@ router.post('/sendLocation/', (req, res, next) => {
     loc.save(function (err, doc) {
         console.log(doc);
         if (doc) {
-            console.log(socket)
+            // console.log(socket)
             if (socket)
                 socket.emit("send-location", doc);
             res.status(200).json({ "a": "a" });

@@ -27,7 +27,7 @@ router.post('/', function (req, res, next) {
 });
 
 router.post('/getByName/', (req, res, next) => {
-    User.findById(req.body._id, (err, res)=>{
+    User.findById(req.body._id, (err, user)=>{
         if (err) {
             return res.status(500).json({
                 title: 'An error occurred',
@@ -41,6 +41,7 @@ router.post('/getByName/', (req, res, next) => {
             });
         }
         else{
+            console.log(user)
             return res.status(200).json({ username: user.firstName});
         }
     });

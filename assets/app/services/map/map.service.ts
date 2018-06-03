@@ -8,8 +8,8 @@ import { AuthService } from "../../auth/auth.service";
 @Injectable()
 export class MapService {
     private _myLoc: { lat: number, lng: number } = {
-        lat : 0 ,
-        lng : 0
+        lat: 0,
+        lng: 0
     }
     public locationUpdates: Subject<any> = new Subject();
     private _currLocation: ReplaySubject<{ lat: number, lng: number }> = new ReplaySubject();
@@ -52,8 +52,17 @@ export class MapService {
         const socket = io.connect(window["origin"]);
         socket.on('connect', function () { console.log("connect successfull") });
         socket.on("send-location", (loc: UserLocation) => {
-            console.log("server position: " , loc.lat, loc.lng);
-            this.locationUpdates.next(loc);
+            console.log("server position: ", loc.lat, loc.lng);
+            this.http.post('http://localhost:3000/user/getByName/', { _id: loc.userId }, {
+                headers: new Headers({
+                    'Content-Type': 'application/json'
+                })
+            }).subscribe(user => {
+                loc.userName = user.json().username
+                console.log(user.json());
+                this.locationUpdates.next(loc);
+            })
+
         })
     }
     public stopFollow() {
