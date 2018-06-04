@@ -16,6 +16,7 @@ import { GoogleMapsComponent } from './map/google-maps.component';
 import { MapService } from './services/map/map.service';
 import { NguiMapModule} from '@ngui/map';
 import { MainpageComponent } from './mainpage/main-page.component';
+import { ContactusComponent } from './contact/contact-us.component';
 
 @NgModule({
 
@@ -25,7 +26,8 @@ import { MainpageComponent } from './mainpage/main-page.component';
         HeaderComponent,
         ErrorComponent,
         GoogleMapsComponent,
-        MainpageComponent
+        MainpageComponent,
+        ContactusComponent
     ],
     imports: [
         NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAl6MPCBdfXpffucV4RcmcYS7c2pG7eg40'}),

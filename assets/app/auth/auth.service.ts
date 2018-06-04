@@ -15,6 +15,7 @@ export class AuthService {
         const body = JSON.stringify(user);
         const headers = new Headers({ 'Content-Type': 'application/json' });
         //return this.http.post('https://sds-app.herokuapp.com/user', body, { headers: headers })
+        //return this.http.post('https://sds-app.eu-west-1.elasticbeanstalk.com/user', body, { headers: headers })
         return this.http.post('http://localhost:3000/user', body, { headers: headers })
             .map((response: Response) => response.json())
             .catch((error: Response) => {
@@ -27,6 +28,7 @@ export class AuthService {
         const body = JSON.stringify(user);
         const headers = new Headers({ 'Content-Type': 'application/json' });
         //return this.http.post('https://sds-app.herokuapp.com/user/signin', body, { headers: headers })
+        //return this.http.post('https://sds-app.eu-west-1.elasticbeanstalk.com/user/signin', body, { headers: headers })
         return this.http.post('http://localhost:3000/user/signin', body, { headers: headers })
             .map((response: Response) => { this._user = response.json(); return response.json() })
             .catch((error: Response) => {
