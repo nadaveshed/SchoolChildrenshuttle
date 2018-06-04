@@ -12,7 +12,9 @@ var userRoutes = require('./routes/user');
 var mapRouter = require("./routes/map");
 
 var app = express();
-mongoose.connect('mongodb://nadaves:db1234@ds159676.mlab.com:59676/scs-dapp');
+//mongoose.connect('mongodb://nadaves:db1234@ds159676.mlab.com:59676/scs-dapp');
+mongoose.connect('localhost:27017/node-angular');
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
