@@ -41,7 +41,7 @@ export class MapService {
     postMyLocation() {
         console.log(this.authService.userId)
         const headers = new Headers({ 'Content-Type': 'application/json' });
-        return this.http.post('http://localhost:3000/map/sendLocation', new UserLocation(
+        return this.http.post('https://sds-app.herokuapp.com/map/sendLocation', new UserLocation(
             this._myLoc.lat,
             this._myLoc.lng,
             this.authService.userId), { headers: headers }).subscribe(res => { })
@@ -53,7 +53,7 @@ export class MapService {
         socket.on('connect', function () { console.log("connect successfull") });
         socket.on("send-location", (loc: UserLocation) => {
             console.log("server position: ", loc.lat, loc.lng);
-            this.http.post('http://localhost:3000/user/getByName/', { _id: loc.userId }, {
+            this.http.post('https://sds-app.herokuapp.com/user/getByName/', { _id: loc.userId }, {
                 headers: new Headers({
                     'Content-Type': 'application/json'
                 })
