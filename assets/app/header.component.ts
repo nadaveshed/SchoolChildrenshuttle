@@ -4,12 +4,12 @@ import { Component } from "@angular/core";
     selector: 'app-header',
     template: `
         <header class="row">
-        <!--<nav class="col-md-8 col-md-offset-2">
+        <!--<nav class="col-md-8 col-md-offset-9">
                 <ul class="nav nav-pills">
-                    <li routerLinkActive="active"><a [routerLink]="['/mainpage']">Main</a></li>
+                    <li routerLinkActive="active"><a [routerLink]="['/mainpage']"><i class="fa fa-home">Main</a></li>
                     <li routerLinkActive="active"><a [routerLink]="['/auth']">Authentication</a></li>
                     <li routerLinkActive="active"><a [routerLink]="['/map']">Map</a></li>
-
+                    <li routerLinkActive="active"><a [routerLink]="['/contact']">Map</a></li>
                     <li routerLinkActive="deactive"><a [routerLink]="['/auth/logout']">logout</a></li>
                 </ul>
             </nav> -->  
@@ -30,10 +30,10 @@ import { Component } from "@angular/core";
                     <div class="collapse navbar-collapse" id="navbar">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="active">
-                                <a href="/mainpage">Home</a>
+                                <a href="/mainpage"><i class="fa fa-home">Home</i></a>
                             </li>
                             <li>
-                                <a href="/map">Map</a>
+                                <a href="/map"><i class="fa fa-map">Map</i></a>
                             </li>
                             <li class="dropdown">
                                 <a href="/auth/signin" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Login<span class="caret"></span></a>
@@ -43,7 +43,7 @@ import { Component } from "@angular/core";
                                 </ul>
                             </li>
                             <li>
-                                <a href="#">Contact</a>
+                                <a href="/contact">Contact</a>
                             </li>
                         </ul>
                         

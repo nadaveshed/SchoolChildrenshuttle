@@ -1,13 +1,13 @@
 
 
 <button *ngIf="startf" class="btn btn-success" (click)="startFollow(); stopf = true; startf = false;">
-  Start follow
+  התחל את המעקב
 </button>
-<button *ngIf="stopf" class="btn btn-success" (click)="ngOnDestroy(); stopf = false; startf = true;">
-  Stop follow
+<button *ngIf="stopf" class="btn btn-danger" (click)="ngOnDestroy(); stopf = false; startf = true;">
+  הפסק מעקב
 </button>
 
-<a routerLink="/mainpage"><button class="btn btn-danger pull-right" >Home page</button></a>
+<!--<a routerLink="/mainpage"><button class="btn btn-danger pull-right" >Home page</button></a>-->
 
 <ngui-map center="Jerusalem, Israel">
     <marker *ngFor="let m of markers" 
@@ -16,3 +16,7 @@
       lng: m.lng
     }" [label]=m.userName></marker>
 </ngui-map>
+
+<footer class="container-fluid">
+  <p>Copyright &copy; Nadav Eshed 2018</p>
+</footer>
