@@ -17,6 +17,7 @@ import { MapService } from './services/map/map.service';
 import { NguiMapModule} from '@ngui/map';
 import { MainpageComponent } from './mainpage/main-page.component';
 import { ContactusComponent } from './contact/contact-us.component';
+import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
 
 @NgModule({
 
@@ -37,7 +38,10 @@ import { ContactusComponent } from './contact/contact-us.component';
         BrowserModule,
         routing,
         HttpModule,
-        MessageModule
+        MessageModule,
+        CollapseModule.forRoot(), 
+        BsDropdownModule.forRoot()
+        
     ],
     providers: [
         AuthService, 

@@ -80,9 +80,8 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
         console.log(this.markers)
 
       });
+      
   }
-
-
 
   public startFollow() {
     this.mapService.currLocation.subscribe(res => {

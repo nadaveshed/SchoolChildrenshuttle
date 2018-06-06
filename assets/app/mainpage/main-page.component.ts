@@ -8,6 +8,5 @@ import { Component } from '@angular/core';
 
 export class MainpageComponent {
   constructor() {}
-
-  Edit: boolean = false;
+  isCollapsed = true;
 }
