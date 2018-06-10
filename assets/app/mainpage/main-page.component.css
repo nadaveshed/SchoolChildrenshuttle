@@ -1,0 +1,107 @@
+.navbar-brand{
+    font-family: 'Great Vibes', cursive;
+    font-size: 30px;
+    margin: 5px 0px 5px 1px;
+  }
+  .navbar-brand{
+  color: #F05F40 !important;
+  }
+  .jumbotron { 
+  background: url('http://i65.tinypic.com/1213l9y.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100vh;
+  width:97vw;
+  margin-left:-15px;
+    position: relative;
+  }
+  
+  .jumbotron  h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 75px;
+    color: white;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%); 
+  }
+  
+  .jumbotron h4{
+      font-family: 'Great Vibes', sans-serif;
+    font-size: 25px;
+    color: white;
+    position: relative;
+      top: 50%;
+    transform: translateY(-50%); 
+  }
+  
+  .btn-primary {
+    color: white;
+    background-color: #F05F40;
+    border-color: #F05F40;
+    -webkit-transition: all 0.35s;
+    -moz-transition: all 0.35s;
+    transition: all 0.35s;
+    margin-top: 25%;
+    
+  }
+  .btn-primary:hover,
+  .btn-primary:focus,
+  .btn-primary.focus,
+  .btn-primary:active,
+  .btn-primary.active,
+  .open > .dropdown-toggle.btn-primary {
+    color: white;
+    background-color: #ee4b28;
+    border-color: #ed431f;
+  }
+  .btn-primary:active,
+  .btn-primary.active,
+  .open > .dropdown-toggle.btn-primary {
+    background-image: none;
+  }
+  .btn-primary.disabled,
+  .btn-primary[disabled],
+  fieldset[disabled] .btn-primary,
+  .btn-primary.disabled:hover,
+  .btn-primary[disabled]:hover,
+  fieldset[disabled] .btn-primary:hover,
+  .btn-primary.disabled:focus,
+  .btn-primary[disabled]:focus,
+  fieldset[disabled] .btn-primary:focus,
+  .btn-primary.disabled.focus,
+  .btn-primary[disabled].focus,
+  fieldset[disabled] .btn-primary.focus,
+  .btn-primary.disabled:active,
+  .btn-primary[disabled]:active,
+  fieldset[disabled] .btn-primary:active,
+  .btn-primary.disabled.active,
+  .btn-primary[disabled].active,
+  fieldset[disabled] .btn-primary.active {
+    background-color: #F05F40;
+    border-color: #F05F40;
+  }
+  .btn-primary .badge {
+    color: #F05F40;
+    background-color: white;
+    
+  }
+  .btn {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    border: none;
+    border-radius: 300px;
+    font-weight: 700;
+    text-transform: uppercase;
+    
+  }
+  .btn-xl {
+    padding: 15px 30px;
+    
+  }
+  .btnDiv {
+    width: 100%;
+    left: 0px;
+    bottom: 10px;
+    position: absolute;
+  }

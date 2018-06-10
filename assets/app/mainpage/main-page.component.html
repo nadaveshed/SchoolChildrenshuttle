@@ -1,53 +1,39 @@
-<nav class="navbar navbar-default">
-        <div class="container-fluid">
-          <!-- Brand and toggle get grouped for better mobile display -->
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" (click)="isCollapsed = !isCollapsed" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">Brand</a>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" [collapse]=isCollapsed>
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Link</a></li>
-              <li class="dropdown" dropdown>
-       <a href="#" dropdownToggle class="dropdown-toggle">Dropdown <span class="caret"></span></a>
-        <ul *dropdownMenu class="dropdown-menu" role="menu">
-          <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-          <li class="divider dropdown-divider"></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-          </li>
-        </ul>
-      </li>
-            </ul>
-            <form class="navbar-form navbar-left">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-              </div>
-              <button type="submit" class="btn btn-default">Submit</button>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Link</a></li>
-                     <li class="dropdown" dropdown>
-       <a href="#" dropdownToggle class="dropdown-toggle">Dropdown <span class="caret"></span></a>
-        <ul *dropdownMenu class="dropdown-menu" role="menu">
-          <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Another action</a></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Something else here</a></li>
-          <li class="divider dropdown-divider"></li>
-          <li role="menuitem"><a class="dropdown-item" href="#">Separated link</a>
-          </li>
-        </ul>
-      </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>
+<header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="navbar-header">
+      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="#" class="navbar-brand">The Authentic Gentleman</a>
+    </div>
+    <nav class="pull-right collapse navbar-collapse bs-navbar-collapse" role="navigation">
+      <ul class="nav navbar-nav">
+        <li>
+          <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Advice</a>
+        </li>
+        <li class="#">
+          <a href="#">About</a>
+        </li>
+      </ul>
+    </nav>
+</header>
+
+<div class="container-fluid">
+  <div class="jumbotron">
+    <h1 class="text-center">The Authetnic Gentelman</h1>
+    <h4 class="text-center">Refine your life</h4>
+      <div class="text-center btnDiv">
+     <a href="#about" class="btn btn-primary btn-xl">Find Out More</a>
+ 
+  </div>
+</div>
+</div>
+

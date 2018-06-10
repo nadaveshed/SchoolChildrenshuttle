@@ -5,7 +5,7 @@
 
 <!--<a routerLink="/mainpage"><button class="btn btn-danger pull-right" >Home page</button></a>-->
 
-<ngui-map center="Jerusalem, Israel">
+<ngui-map center="Jerusalem, Israel" zoom="13">
     <marker *ngFor="let m of markers" 
     [position]="{
       lat: m.lat,

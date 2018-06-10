@@ -31,7 +31,7 @@ import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
         ContactusComponent
     ],
     imports: [
-        NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAl6MPCBdfXpffucV4RcmcYS7c2pG7eg40'}),
+        NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyDd3ot5m-UXiqmgfcM6d_D2BIvpIQJ_AsY'}),
         //AgmCoreModule.forRoot({
         //    apiKey: 'AIzaSyAl6MPCBdfXpffucV4RcmcYS7c2pG7eg40'
         //}),

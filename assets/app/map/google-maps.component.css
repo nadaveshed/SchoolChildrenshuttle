@@ -1,13 +1,12 @@
 
 button{
-  position:absolute;
-  display:block;
   margin: 20px;
   margin-left: 20%;
   font-size: 25px;
   cursor: pointer;
-  -webkit-transition-duration: 0.4s; /* Safari */
-  transition-duration: 0.4s;
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
 }
 
 @media (min-width: 1125px) and (max-width: 2000px) {
@@ -27,7 +26,7 @@ button{
 ngui-map {
   height: 80%;
   display:block;
-  margin-top: 2%;
+  margin-top: 3%;
   position: relative;
 }
 
