@@ -34,6 +34,22 @@
      <a href="#about" class="btn btn-primary btn-xl">Find Out More</a>
  
   </div>
+  <div class="btn-group">
+    <button type="button" class="btn btn-danger">Action</button>
+    <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <span class="caret"></span>
+      <span class="sr-only">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li ng-repeat="a in vm.exportAction">
+        <a ng-if="a.visble == true">
+          <span ng-click="vm.selectedExport(a)">logut</span>
+        </a>
+        <div ng-if="a.divider == true">
+          <div role="separator" class="divider"></div>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
 </div>
-
