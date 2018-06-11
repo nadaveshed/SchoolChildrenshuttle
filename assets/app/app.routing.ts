@@ -5,7 +5,7 @@ import { AuthenticationComponent } from "./auth/authentication.component";
 import { GoogleMapsComponent } from "./map/google-maps.component";
 import { MainpageComponent } from "./mainpage/main-page.component";
 import { ContactusComponent } from "./contact/contact-us.component";
-import { ManagerSettingsComponent } from "./auth/managersettings/manager.component";
+import { ManagerSettingsComponent } from "./managersettings/manager.component";
 import { DriversComponent } from "./drivers/drivers.component";
 
 const APP_ROUTES: Routes = [

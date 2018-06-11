@@ -14,8 +14,8 @@
 </ngui-map>
 
 <button *ngIf="startf" class="btn btn-success" id="btn" (click)="startFollow(); stopf = true; startf = false;">
-  התחל את המעקב
+  Start follow
 </button>
 <button *ngIf="stopf" class="btn btn-danger" id="btn"(click)="ngOnDestroy(); stopf = false; startf = true;">
-  הפסק מעקב
+  Stop follow
 </button>

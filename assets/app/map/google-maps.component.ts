@@ -19,7 +19,8 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
   stopf: boolean = false;
   subscripition: Subscription;
 
-  constructor(private mapService: MapService) {}
+  constructor(private mapService: MapService) {
+  }
 
   onChoseLocation(event) {
     this.lat = event.coords.lat;

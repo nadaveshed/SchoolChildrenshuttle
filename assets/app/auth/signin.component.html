@@ -1,7 +1,7 @@
 <div class="col-md-8 col-md-offset-2">
-    <form [formGroup]="myForm" (ngSubmit)="onSubmit()">
+    <form [formGroup]="myForm" (ngSubmit)="onSubmit()" style="font-size: 20px">
         <div class="form-group">
-            <label for="email">מייל</label>
+            <label for="email">Mail</label>
             <input
                     type="email"
                     id="email"
@@ -9,7 +9,7 @@
                     formControlName="email">
         </div>
         <div class="form-group">
-            <label for="password">סיסמא</label>
+            <label for="password">Password</label>
             <input
                     type="password"
                     id="password"
@@ -19,6 +19,6 @@
         <button
                 class="btn btn-primary"
                 type="submit"
-                [disabled]="!myForm.valid">שלח</button>
+                [disabled]="!myForm.valid">Submit</button>
     </form>
 </div>

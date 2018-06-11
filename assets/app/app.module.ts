@@ -19,7 +19,7 @@ import { MainpageComponent } from './mainpage/main-page.component';
 import { ContactusComponent } from './contact/contact-us.component';
 import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
 import { DriversComponent } from './drivers/drivers.component';
-import { ManagerSettingsComponent } from './auth/managersettings/manager.component';
+import { ManagerSettingsComponent } from './managersettings/manager.component';
 
 @NgModule({
 

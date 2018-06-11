@@ -4,12 +4,12 @@ import { AuthService } from "./auth.service";
 @Component({
     selector: 'app-authentication',
     template: `
-        <header class="row spacing" style = "margin-top: 5%">
+        <header class="row spacing" style="font-size: 25px">
             <nav class="col-md-8 col-md-offset-2">
                 <ul class="nav nav-tabs">
-                    <li routerLinkActive="active"><a [routerLink]="['signup']">הרשמה</a></li>
-                    <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">התחברות</a></li>
-                    <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">התנתקות</a></li>
+                    <li routerLinkActive="active"><a [routerLink]="['signup']">Sign up</a></li>
+                    <li routerLinkActive="active" *ngIf="!isLoggedIn()"><a [routerLink]="['signin']">Sign in</a></li>
+                    <li routerLinkActive="active" *ngIf="isLoggedIn()"><a [routerLink]="['logout']">Logout</a></li>
                 </ul>
             </nav>
         </header>
