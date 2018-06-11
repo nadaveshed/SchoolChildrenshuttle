@@ -1,6 +1,6 @@
 <div class="col-md-8 col-md-offset-2">
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()" style="font-size: 20px">
-        <div class="form-group">
+        <div class="form-group" style="margin-top: 30px">
             <label for="firstName">First name</label>
             <input
                     type="text"
@@ -51,6 +51,7 @@
         <button
                 class="btn btn-primary"
                 type="submit"
+                style="font-size: 25px"
                 [disabled]="!myForm.valid">Submit</button>
     </form>
 </div>

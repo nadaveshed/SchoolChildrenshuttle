@@ -9,7 +9,7 @@ var schema = new Schema({
     email: {type: String, required: true, unique: true},
     messages: [{type: Schema.Types.ObjectId, ref: 'Message'}],
     address: {type: String, required: true},
-    phonenumber: {type: int, required: true},
+    phonenumber: {type: String, required: true},
     location: {type: String}
 });
 

@@ -1,6 +1,6 @@
 <div class="col-md-8 col-md-offset-2">
     <form [formGroup]="myForm" (ngSubmit)="onSubmit()" style="font-size: 20px">
-        <div class="form-group">
+        <div class="form-group" style="margin-top: 30px">
             <label for="email">Mail</label>
             <input
                     type="email"
@@ -16,9 +16,15 @@
                     class="form-control"
                     formControlName="password">
         </div>
+
+        <div class="form-group">
+            <label for="Remember">Remember me  </label>
+            <input type=checkbox>
+        </div>
         <button
                 class="btn btn-primary"
                 type="submit"
-                [disabled]="!myForm.valid">Submit</button>
+                style="font-size: 25px"
+                [disabled]="!myForm.valid">Login</button>
     </form>
 </div>
