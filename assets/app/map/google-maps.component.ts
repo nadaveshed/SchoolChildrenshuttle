@@ -19,14 +19,7 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
   stopf: boolean = false;
   subscripition: Subscription;
 
-  constructor(private mapService: MapService) {
-    /*navigator.geolocation.watchPosition(position=>{
-      this.lat = position.coords.latitude;
-      this.lng = position.coords.longitude;
-      console.log(this.lat, " " ,this.lng)
-    });*/
-
-  }
+  constructor(private mapService: MapService) {}
 
   onChoseLocation(event) {
     this.lat = event.coords.lat;
@@ -34,29 +27,8 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
     this.locationChosen = true;
   }
 
-  clickedMarker(label: string, index: number) {
-    console.log(`clicked the marker: ${label || index}`)
-  }
-
-  mapClicked($event: MouseEvent) {
-    // this.markers.push({
-    //   lat: $event.coords.lat,
-    //   lng: $event.coords.lng,
-    //   draggable: true
-    // });
-  }
-
-  markerDragEnd(m: marker, $event: MouseEvent) {
-    //console.log('dragEnd', m, $event);
-    console.log(m.label, $event.coords.lat, $event.coords.lng);
-  }
 
   markers: UserLocationView[] = []
-  //  = [{
-  //   // draggable: false,
-  //   lat: 31.7766,
-  //   lng: 35.2
-  // }];
 
   ngOnInit() {
     // if(navigator.geolocation){

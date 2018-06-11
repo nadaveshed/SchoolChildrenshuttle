@@ -5,6 +5,8 @@ import { AuthenticationComponent } from "./auth/authentication.component";
 import { GoogleMapsComponent } from "./map/google-maps.component";
 import { MainpageComponent } from "./mainpage/main-page.component";
 import { ContactusComponent } from "./contact/contact-us.component";
+import { ManagerSettingsComponent } from "./auth/managersettings/manager.component";
+import { DriversComponent } from "./drivers/drivers.component";
 
 const APP_ROUTES: Routes = [
     { path: '', redirectTo: '/mainpage', pathMatch: 'full' },
@@ -12,7 +14,10 @@ const APP_ROUTES: Routes = [
     { path: 'auth', component: AuthenticationComponent, loadChildren: './auth/auth.module#AuthModule' },
     { path: 'map', component: GoogleMapsComponent },
     { path: 'mainpage', component: MainpageComponent },
-    { path: 'contact', component: ContactusComponent }
+    { path: 'contact', component: ContactusComponent },
+    { path: 'drivers', component: DriversComponent },
+    { path: 'manage', component: ManagerSettingsComponent }
+
 ];
 
 export const routing = RouterModule.forRoot(APP_ROUTES);

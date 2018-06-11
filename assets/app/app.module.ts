@@ -18,6 +18,8 @@ import { NguiMapModule} from '@ngui/map';
 import { MainpageComponent } from './mainpage/main-page.component';
 import { ContactusComponent } from './contact/contact-us.component';
 import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
+import { DriversComponent } from './drivers/drivers.component';
+import { ManagerSettingsComponent } from './auth/managersettings/manager.component';
 
 @NgModule({
 
@@ -28,7 +30,9 @@ import { CollapseModule, BsDropdownModule } from 'ngx-bootstrap';
         ErrorComponent,
         GoogleMapsComponent,
         MainpageComponent,
-        ContactusComponent
+        ContactusComponent,
+        DriversComponent,
+        ManagerSettingsComponent
     ],
     imports: [
         NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyDd3ot5m-UXiqmgfcM6d_D2BIvpIQJ_AsY'}),
