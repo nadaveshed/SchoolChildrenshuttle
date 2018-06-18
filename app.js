@@ -12,8 +12,8 @@ var userRoutes = require('./routes/user');
 var mapRouter = require("./routes/map");
 
 var app = express();
-//mongoose.connect('nadaves:db1234@ds159676.mlab.com:59676/scs-dapp');
-mongoose.connect('localhost:27017/node-angular');
+mongoose.connect('mongodb://nadaves:db1234@ds247270.mlab.com:47270/scs-app');
+//mongoose.connect('localhost:27017/node-angular');
 
 
 // view engine setup

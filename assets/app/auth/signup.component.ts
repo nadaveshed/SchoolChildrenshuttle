@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 
 import { AuthService } from "./auth.service";
 import { User } from "./user.model";
@@ -11,7 +12,7 @@ import { User } from "./user.model";
 export class SignupComponent implements OnInit {
     myForm: FormGroup;
 
-    constructor(private authService: AuthService) {}
+    constructor(private authService: AuthService, private router: Router) {}
 
     onSubmit() {
         const user = new User(
@@ -26,14 +27,16 @@ export class SignupComponent implements OnInit {
                 error => console.error(error)
             );
         this.myForm.reset();
+        this.router.navigate(['/auth', 'signin']);
+        
     }
 
     ngOnInit() {
         this.myForm = new FormGroup({
             firstName: new FormControl(null, Validators.required),
             lastName: new FormControl(null, Validators.required),
-            phonenumber: new FormControl(null, Validators.required),
-            address: new FormControl(null, Validators.required),
+            // phonenumber: new FormControl(null, Validators.required),
+            // address: new FormControl(null, Validators.required),
             email: new FormControl(null, [
                 Validators.required,
                 Validators.pattern("[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?")
