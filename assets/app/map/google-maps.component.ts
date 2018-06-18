@@ -36,7 +36,7 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
       navigator.geolocation.getCurrentPosition(position=>{
         this.lat = 31.776629; //position.coords.latitude;
         this.lng = 35.2000724; //position.coords.longitude;
-        console.log("my location: ", this.lat, this.lng);
+        //console.log("my location: ", this.lat, this.lng);
       });
       this.subscripition = this.mapService.locationUpdates.subscribe((loc: UserLocation) => {
         
@@ -58,15 +58,14 @@ export class GoogleMapsComponent implements OnInit, OnDestroy {
 
   public startFollow() {
     this.mapService.currLocation.subscribe(res => {
-      console.log(res)
+      //console.log(res)
     });
     this.mapService.getSocketUpdate();
     console.log("start follow");
   } 
 
   public ngOnDestroy() {
-    // this.mapService.currLocation.unsubscribe();
-    console.log("goodby");
+    this.mapService.stopFollow();
   } 
 
 }

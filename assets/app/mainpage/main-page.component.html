@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="#" class="navbar-brand">The Authentic Gentleman</a>
+      <a href="#" class="navbar-brand">The App</a>
     </div>
     <nav class="pull-right collapse navbar-collapse bs-navbar-collapse" role="navigation">
       <ul class="nav navbar-nav">
@@ -35,7 +35,8 @@
  
   </div>
   <div class="btn-group">
-    <button type="button" class="btn btn-danger">Action</button>
+    <button type="button" class="btn btn-success" *ngIf="isLoggedIn()">Action</button>
+    <button type="button" class="btn btn-danger" *ngIf="!isLoggedIn()">Pause</button>
     <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
       <span class="caret"></span>
       <span class="sr-only">Toggle Dropdown</span>

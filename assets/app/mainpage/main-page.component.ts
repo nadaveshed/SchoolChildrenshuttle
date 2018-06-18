@@ -8,5 +8,17 @@ import { Component } from '@angular/core';
 
 export class MainpageComponent {
   constructor() {}
-  isCollapsed = true;
+ 
+  // check if the user signin
+  isLoggedIn() {
+    var isCollapsed = false;
+    //console.log(localStorage.getItem('token'));
+    if(localStorage.getItem('token') !== null)
+    {
+      //console.log(isCollapsed);
+      isCollapsed = true;
+    }
+    return isCollapsed;
+  }
+
 }

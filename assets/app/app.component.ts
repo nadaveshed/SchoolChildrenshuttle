@@ -10,6 +10,15 @@ export class AppComponent
     isCollapsed = true;
 
     isLoggedIn() {
-        return localStorage.getItem('token') !== null;
-    }
+        var login = false;
+        //console.log(localStorage.getItem('token'));
+        if(localStorage.getItem('token') !== null)
+        {
+          //console.log(login);
+          login = true;
+        }
+        return login;
+      }
+
+    
 }

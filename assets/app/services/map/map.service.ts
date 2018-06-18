@@ -4,6 +4,7 @@ import * as io from 'socket.io-client';
 import { UserLocation } from "../../models/user-location.model";
 import { Http, Headers } from "@angular/http";
 import { AuthService } from "../../auth/auth.service";
+import { Socket } from "net";
 
 @Injectable()
 export class MapService {
@@ -28,7 +29,7 @@ export class MapService {
             this.postMyLocation()
 
         }, err => {
-            console.log(err)
+            //console.log(err)
         }, { enableHighAccuracy: true, timeout: 5000 })
     }
 
@@ -53,7 +54,7 @@ export class MapService {
         const socket = io.connect(window["origin"]);
         socket.on('connect', function () { console.log("connect successfull") });
         socket.on("send-location", (loc: UserLocation) => {
-            console.log("server position: ", loc.lat, loc.lng);
+            //console.log("server position: ", loc.lat, loc.lng);
             //this.http.post('https://sds-app.eu-west-1.elasticbeanstalk.com/user/getByName/', { _id: loc.userId }, {
             this.http.post('http://localhost:3000/user/getByName/', { _id: loc.userId }, {    
                 headers: new Headers({
@@ -61,13 +62,16 @@ export class MapService {
                 })
             }).subscribe(user => {
                 loc.userName = user.json().username
-                console.log(user.json());
+                //console.log(user.json());
                 this.locationUpdates.next(loc);
             })
 
         })
     }
     public stopFollow() {
-        console.log("stoped follow");
+        // var nsp = io.of('/');
+        // nsp.removeListener('connection', window["origin"]);
+        console.log("stopped follow");
     }
+    
 }
