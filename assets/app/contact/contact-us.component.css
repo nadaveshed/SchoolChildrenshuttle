@@ -39,6 +39,11 @@ input[type=submit]:hover {
     padding: 20px;
 }
 
-.submit{
-    text-align: right;
+.btn-success{
+    text-align: center;
+    font-size: 25px;
+}
+
+.container{
+    height: 89vh;
 }

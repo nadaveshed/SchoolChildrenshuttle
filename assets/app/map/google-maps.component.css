@@ -1,7 +1,7 @@
 
 button{
   margin: 20px;
-  margin-left: 28%;
+  margin-left: 43vw;
   font-size: 25px;
   cursor: pointer;
   -webkit-transition: all 0.35s;
@@ -9,9 +9,9 @@ button{
   transition: all 0.35s;
 }
 
-@media (min-width: 1125px) and (max-width: 2000px) {
+@media (min-width: 100px) and (max-width: 1000px) {
   #btn {
-      margin-left: 42%;
+      margin-left: 30%;
       } 
   }
 

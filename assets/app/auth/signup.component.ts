@@ -27,7 +27,8 @@ export class SignupComponent implements OnInit {
                 error => console.error(error)
             );
         this.myForm.reset();
-        this.router.navigate(['/auth', 'signin']);
+        this.router.navigate(['/auth', 'signup']);
+        
         
     }
 

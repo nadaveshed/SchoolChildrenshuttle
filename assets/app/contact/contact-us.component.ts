@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { FormGroup, FormControl, Validators } from "@angular/forms";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'contact-us',
@@ -7,9 +9,12 @@ import { Component } from "@angular/core";
 })
 
 export class ContactusComponent {
-  constructor() {}
-
+  constructor(private router: Router) {}
+  myForm: FormGroup;
   Edit: boolean = false;
 
+  onSubmit() {
+    this.myForm.reset();
+  }
 
 }

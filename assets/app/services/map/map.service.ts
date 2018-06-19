@@ -40,7 +40,7 @@ export class MapService {
     }
 
     postMyLocation() {
-        console.log(this.authService.userId)
+        //console.log(this.authService.userId)
         const headers = new Headers({ 'Content-Type': 'application/json' });
         //return this.http.post('https://sds-app.eu-west-1.elasticbeanstalk.com/map/sendLocation', new UserLocation(
         return this.http.post('http://localhost:3000/map/sendLocation', new UserLocation(
@@ -50,7 +50,7 @@ export class MapService {
     }
 
     public getSocketUpdate() {
-        console.log(window["origin"])
+        //console.log(window["origin"])
         const socket = io.connect(window["origin"]);
         socket.on('connect', function () { console.log("connect successfull") });
         socket.on("send-location", (loc: UserLocation) => {

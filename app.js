@@ -12,9 +12,15 @@ var userRoutes = require('./routes/user');
 var mapRouter = require("./routes/map");
 
 var app = express();
-mongoose.connect('mongodb://nadaves:db1234@ds247270.mlab.com:47270/scs-app');
+mongoose.connect('mongodb://nadaves:db1234@ds247270.mlab.com:47270/scs-app', function(err, dbref){ 
 //mongoose.connect('localhost:27017/node-angular');
-
+if (!err) {
+    console.log("Mongodb connected");
+    db = dbref;
+  }else{
+    console.log("Error while connecting to mongoDB" + err);
+  }
+});
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
