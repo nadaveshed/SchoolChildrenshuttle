@@ -32,7 +32,7 @@
     "core-js": "^2.4.1",
     "debug": "~2.2.0",
     "express": "~4.14.0",
-    "hbs": "~3.1.0",
+    "hbs": "~4.2.0",
     "jsonwebtoken": "^5.7.0",
     "mapbox-gl": "^0.43.0",
     "mongoose": "^4.13.21",
